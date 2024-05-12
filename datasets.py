@@ -168,7 +168,6 @@ class MNIST(object):
             else:
                 unlabeled_ind.append(i)
 
-        # 随机选
         random.shuffle(filter_ind)
         labeled_ind = filter_ind[:len(filter_ind) * init_percent // 10000]
         unlabeled_ind = unlabeled_ind + filter_ind[len(filter_ind) * init_percent // 10000:]
